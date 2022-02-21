@@ -1,0 +1,24 @@
+syntax = "v1"
+
+info (
+	title: // TODO: add title
+	desc: // TODO: add description
+	author: "Tobeyw"
+	email: "tobey1024@126.com"
+)
+
+type projectReq {
+	// TODO: add members here and delete this comment
+	ProjectId    string `form:"projectId"`
+	ProjectToken string `form:"ProjectToken"`
+}
+
+type projectResp {
+	Ok bool `json:"ok"`
+}
+
+service nft-api {
+	@handler AddProject // TODO: set handler name and delete this comment
+	post /nft/project (projectReq) returns(projectResp)
+	
+}

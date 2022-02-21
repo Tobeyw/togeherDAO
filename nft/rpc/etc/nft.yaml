@@ -1,0 +1,12 @@
+Name: nft.rpc
+ListenOn: 127.0.0.1:8080
+Etcd:
+  Hosts:
+  - 127.0.0.1:2379
+  Key: nft.rpc
+DataSource: admin:123456@tcp(localhost:3306)/nft
+Table: project
+Prometheus:
+  Host: 0.0.0.0
+  Port: 9080
+  Path: /metrics

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package nft;
+option go_package = "./project";
+message projectReq {
+  string projectId = 1;
+  string projectToken = 2;
+}
+
+message projectResp {
+  string ok = 1;
+}
+
+service Nft {
+  rpc Add(projectReq) returns(projectResp);
+}
